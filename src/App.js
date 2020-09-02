@@ -10,8 +10,9 @@ const Grid = styled.div`
   background-color: #292a2c;
   position: relative;
   display: grid;
+  border-bottom: solid 15px rgba(137, 67, 22, 0.81);
   grid-template-rows: repeat(13, 1fr);
-  grid-template-columns: repeat(10, 1fr) 1fr 1fr 1fr;
+  grid-template-columns: repeat(13, 1fr);
 `;
 
 function App() {
