@@ -34,6 +34,9 @@ const IconLink = styled.a`
     margin-right: 40px;
   }
 `;
+const Link = styled.a`
+  color: #f7d891;
+`;
 const Contact = () => {
   return (
     <StyledContact>
