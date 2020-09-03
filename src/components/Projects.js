@@ -21,6 +21,7 @@ const ProjectsContainer = styled.div`
   grid-column: 1 / 11;
   grid-row: 1/11;
   background-color: #292a2c;
+  padding: 23px;
 `;
 const Closed = styled(ProjectsContainer)`
   background-color: #1e2c42;
@@ -30,6 +31,9 @@ const Closed = styled(ProjectsContainer)`
 `;
 const Open = styled(Closed)`
   animation: ${openProjects} 2s ease forwards;
+`;
+const Heading = styled.h1`
+  font-size: 40px;
 `;
 const Projects = ({ open, toggleOpen }) => {
   const openProjectStructured = (
@@ -42,7 +46,7 @@ const Projects = ({ open, toggleOpen }) => {
     openProjectStructured
   ) : (
     <Closed onClick={toggleOpen}>
-      <h1>Projects</h1>
+      <Heading>Projects</Heading>
     </Closed>
   );
 };
