@@ -28,6 +28,7 @@ const Closed = styled(ProjectsContainer)`
   position: absolute;
   width: 100%;
   animation: ${closeProjects} 2s ease forwards;
+  box-shadow: inset -1px -1px 9px 3px rgba(33, 33, 33, 0.6);
 `;
 const Open = styled(Closed)`
   animation: ${openProjects} 2s ease forwards;

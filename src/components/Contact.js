@@ -9,6 +9,7 @@ const StyledContact = styled.div`
   background-color: #1e2c42;
   padding: 23px;
   display: flex;
+  box-shadow: inset -1px -1px 9px 3px rgba(33, 33, 33, 0.6);
 `;
 const H3 = styled.h3`
   font-size: 27px;
@@ -17,6 +18,7 @@ const H3 = styled.h3`
 const FlexChild = styled.div`
   flex: 0 0 15%;
   display: flex;
+  padding-top: 4px;
   flex-direction: column;
   justify-content: space-between;
 `;
@@ -42,12 +44,14 @@ const Contact = () => {
     <StyledContact>
       <H3>Contact</H3>
       <FlexChild>
-        <a href="mailto:ulisesgomez120@gmail.com">ulisesgomez120@gmail.com</a>
+        <Link href="mailto:ulisesgomez120@gmail.com">
+          ulisesgomez120@gmail.com
+        </Link>
         <IconContainer>
-          <IconLink href="#">
+          <IconLink href="https://www.linkedin.com/in/ulises-gomez/">
             <img src={linkedinIcon} />
           </IconLink>
-          <IconLink href="#">
+          <IconLink href="https://github.com/ulisesgomez120">
             <img src={githubIcon} />
           </IconLink>
         </IconContainer>
