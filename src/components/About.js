@@ -56,20 +56,6 @@ const Open = styled(Closed)`
   background-color: hsl(220, 4%, 17%);
   animation: ${openAbout} 0.7s cubic-bezier(0.07, 0.58, 0.67, 1.07) forwards;
 `;
-const Stagger = keyframes`
-  from {
-    opacity: 0;
-    transform: translate(30px, -70px);
-  }
-  to {
-    opacity: 1;
-  }
-`;
-const Li = styled.li`
-  opacity: 0;
-  animation: ${Stagger} 350ms ${(props) => props.delay * 100 + "ms"} ease
-    forwards;
-`;
 const P = styled.p`
   color: ${({ color }) => color || "white"};
   font-size: ${({ fontSize }) => fontSize || "16px"};
