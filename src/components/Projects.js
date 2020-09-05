@@ -17,6 +17,20 @@ const openProjects = keyframes`
     height: 0%;
   }
 `;
+const Stagger = keyframes`
+  from {
+    opacity: 0;
+    transform: translate(30px, -70px);
+  }
+  to {
+    opacity: 1;
+  }
+`;
+const Li = styled.li`
+  opacity: 0;
+  animation: ${Stagger} 350ms ${(props) => props.delay * 100 + "ms"} ease
+    forwards;
+`;
 const ProjectsContainer = styled.div`
   grid-column: 1 / 11;
   grid-row: 1/11;

@@ -60,7 +60,7 @@ const P = styled.p`
   color: ${({ color }) => color || "white"};
   font-size: ${({ fontSize }) => fontSize || "16px"};
   text-align: ${({ align }) => align || "left"};
-  margin: 30px;
+  margin: ${({ margin }) => margin || "30px"};
 `;
 const ArrowContainer = styled.div`
   display: flex;
@@ -80,18 +80,18 @@ const Arrow = styled.img`
 const About = ({ open, toggleOpen }) => {
   return open ? (
     <Open>
-      <h2 style={{ color: "#17191c" }}>About</h2>
+      <h2 style={{ color: "#14171c" }}>About</h2>
       <div style={{ display: "flex", height: "100%" }}>
         <ArrowContainer>
           <Arrow src={arrowSVG} onClick={toggleOpen} className="open" />
         </ArrowContainer>
         <div>
           <P>A firm believer in</P>
-          <P fontSize="1.4em" color="#f7d891" align="right" margin>
+          <P fontSize="1.4em" color="#f7d891" align="right" margin="30px 45px">
             Getting After It!
           </P>
           <P>and answering most problems with one word</P>
-          <P fontSize="1.6em" color="#f7d891" align="right">
+          <P fontSize="1.6em" color="#f7d891" align="right" margin="30px 55px">
             GOOD.
           </P>
           <P>
