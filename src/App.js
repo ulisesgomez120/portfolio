@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import styled from "styled-components";
-import About from "./components/About";
+import About from "./components/withProps/About";
 import Contact from "./components/Contact";
-import Projects from "./components/Projects";
+import Projects from "./components/withProps/Projects/Projects";
 const Grid = styled.div`
   min-height: 100vh;
   min-width: 100vw;

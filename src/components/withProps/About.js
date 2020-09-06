@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import arrowSVG from "../assets/icons/arrow.svg";
+import arrowSVG from "../../assets/icons/arrow.svg";
 
 const openAbout = keyframes`
   from {
@@ -61,6 +61,7 @@ const P = styled.p`
   font-size: ${({ fontSize }) => fontSize || "16px"};
   text-align: ${({ align }) => align || "left"};
   margin: ${({ margin }) => margin || "30px"};
+  opacity: ${({ opacity }) => opacity || "80%"};
 `;
 const ArrowContainer = styled.div`
   display: flex;
@@ -76,22 +77,39 @@ const Arrow = styled.img`
     animation: ${rotateOpen} 0.7s ease forwards;
   }
 `;
-
+const Heading = styled.h2`
+  font-size: 28px;
+  &.dark {
+    color: #14171c;
+  }
+`;
 const About = ({ open, toggleOpen }) => {
   return open ? (
     <Open>
-      <h2 style={{ color: "#14171c" }}>About</h2>
+      <Heading className="dark">About</Heading>
       <div style={{ display: "flex", height: "100%" }}>
         <ArrowContainer>
           <Arrow src={arrowSVG} onClick={toggleOpen} className="open" />
         </ArrowContainer>
         <div>
           <P>A firm believer in</P>
-          <P fontSize="1.4em" color="#f7d891" align="right" margin="30px 45px">
+          <P
+            fontSize="1.4em"
+            color="#f7d891"
+            align="right"
+            margin="30px 45px"
+            opacity="100%"
+          >
             Getting After It!
           </P>
           <P>and answering most problems with one word</P>
-          <P fontSize="1.6em" color="#f7d891" align="right" margin="30px 55px">
+          <P
+            fontSize="1.6em"
+            color="#f7d891"
+            align="right"
+            margin="30px 55px"
+            opacity="100%"
+          >
             GOOD.
           </P>
           <P>
@@ -111,7 +129,7 @@ const About = ({ open, toggleOpen }) => {
     </Open>
   ) : (
     <Closed>
-      <h2>About</h2>
+      <Heading>About</Heading>
       <ArrowContainer>
         <Arrow src={arrowSVG} onClick={toggleOpen} className="closed" />
       </ArrowContainer>
