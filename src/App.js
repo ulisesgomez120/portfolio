@@ -18,7 +18,7 @@ const Grid = styled.div`
 function App() {
   let [aboutOpen, setAboutOpen] = useState(false);
   let [projectsOpen, setProjectsOpen] = useState(false);
-
+  console.log(window.innerWidth);
   return (
     <Grid>
       <Projects

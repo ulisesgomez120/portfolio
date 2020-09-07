@@ -49,10 +49,10 @@ const Contact = () => {
         </Link>
         <IconContainer>
           <IconLink href="https://www.linkedin.com/in/ulises-gomez/">
-            <img src={linkedinIcon} />
+            <img src={linkedinIcon} alt="linkedin" />
           </IconLink>
           <IconLink href="https://github.com/ulisesgomez120">
-            <img src={githubIcon} />
+            <img src={githubIcon} alt="github" />
           </IconLink>
         </IconContainer>
       </FlexChild>

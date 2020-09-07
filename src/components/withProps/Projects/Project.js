@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  background-image: url(${({ url }) => url});
+  background-image: url(${({ img }) => img});
   background-position: center;
   background-size: cover;
-  flex: 0 1 400px;
-  height: 300px;
+  height: 100%;
+  width: 100%;
   border: 4px solid #dbc48e;
   border-radius: 3px;
-  margin: 15px;
+
   position: relative;
   &::after {
     content: "";
@@ -26,16 +26,15 @@ const Card = styled.div`
     }
   }
 `;
-const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: rgba(28, 30, 34, 0.48);
-`;
 const Project = (props) => {
-  return <Card url={props.url}></Card>;
+  return (
+    <a
+      href={props.url}
+      style={{ flex: "0 1 400px", margin: "15px", height: "300px" }}
+    >
+      <Card img={props.imgUrl}></Card>
+    </a>
+  );
 };
 
 export default Project;

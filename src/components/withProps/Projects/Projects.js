@@ -8,10 +8,10 @@ import ugUrl from "../../../assets/images/ugelp.jpg";
 import lhUrl from "../../../assets/images/luxHotel.jpg";
 
 export const projectsData = [
-  { siteUrl: "", imgUrl: tlUrl },
-  { siteUrl: "", imgUrl: buUrl },
-  { siteUrl: "", imgUrl: ugUrl },
-  { siteUrl: "", imgUrl: lhUrl },
+  { siteUrl: "https://www.tania-lucely.com/", imgUrl: tlUrl },
+  { siteUrl: "https://budgetplan.netlify.app/", imgUrl: buUrl },
+  { siteUrl: "https://ugelp.netlify.app/", imgUrl: ugUrl },
+  { siteUrl: "https://luxhotel.netlify.app/", imgUrl: lhUrl },
 ];
 
 const closeProjects = keyframes`
@@ -114,10 +114,11 @@ const Arrow = styled.img`
     animation: ${rotateOpen} 0.7s ease forwards;
   }
 `;
+
+const projectJsx = projectsData.map(({ imgUrl, siteUrl }, i) => (
+  <Project key={i} imgUrl={imgUrl} url={siteUrl} />
+));
 const Projects = ({ open, toggleOpen }) => {
-  const projectJsx = projectsData.map(({ imgUrl, siteUrl }) => (
-    <Project url={imgUrl} />
-  ));
   const openProjectStructured = (
     <React.Fragment>
       <Slide className="openSlide">
