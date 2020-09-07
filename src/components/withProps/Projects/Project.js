@@ -2,9 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  background-color: yellow;
-  flex: 1 1 300px;
+  background-image: url(${({ url }) => url});
+  background-position: center;
+  background-size: cover;
+  flex: 0 1 250px;
   height: 200px;
+  border: 2px solid #dbc48e;
   margin: 15px;
   @media (max-width: 919px) {
     &:first-child {
@@ -12,8 +15,16 @@ const Card = styled.div`
     }
   }
 `;
-const Project = () => {
-  return <Card>Hello</Card>;
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: rgba(28, 30, 34, 0.48);
+`;
+const Project = (props) => {
+  return <Card url={props.url}></Card>;
 };
 
 export default Project;

@@ -2,6 +2,17 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import arrowSVG from "../../../assets/icons/arrow.svg";
 import Project from "./Project";
+import tlUrl from "../../../assets/images/taniaLucely.png";
+import buUrl from "../../../assets/images/budgetMe.png";
+import ugUrl from "../../../assets/images/ugelp.png";
+import lhUrl from "../../../assets/images/luxHotel.png";
+
+export const projectsData = [
+  { siteUrl: "", imgUrl: tlUrl },
+  { siteUrl: "", imgUrl: buUrl },
+  { siteUrl: "", imgUrl: ugUrl },
+  { siteUrl: "", imgUrl: lhUrl },
+];
 
 const closeProjects = keyframes`
   from {
@@ -107,6 +118,9 @@ const Arrow = styled.img`
   }
 `;
 const Projects = ({ open, toggleOpen }) => {
+  const projectJsx = projectsData.map(({ imgUrl, siteUrl }) => (
+    <Project url={imgUrl} />
+  ));
   const openProjectStructured = (
     <React.Fragment>
       <Slide className="openSlide">
@@ -115,11 +129,7 @@ const Projects = ({ open, toggleOpen }) => {
         </ArrowContainer>
       </Slide>
 
-      <ProjectsContainer>
-        <Project></Project>
-        <Project></Project>
-        <Project></Project>
-      </ProjectsContainer>
+      <ProjectsContainer>{projectJsx}</ProjectsContainer>
     </React.Fragment>
   );
   return open ? (
