@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import arrowSVG from "../../assets/icons/arrow.svg";
+import arrowSVG from "../../../assets/icons/arrow.svg";
 
 const openAbout = keyframes`
   from {

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import githubIcon from "../assets/icons/github.svg";
-import linkedinIcon from "../assets/icons/linkedin.svg";
+import githubIcon from "../../assets/icons/github.svg";
+import linkedinIcon from "../../assets/icons/linkedin.svg";
 
 const StyledContact = styled.footer`
   grid-column: 1 / 11;

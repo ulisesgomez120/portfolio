@@ -1,11 +1,11 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import arrowSVG from "../../../assets/icons/arrow.svg";
+import arrowSVG from "../../../../assets/icons/arrow.svg";
 import Project from "./Project";
-import tlUrl from "../../../assets/images/taniaLucely.jpg";
-import buUrl from "../../../assets/images/budgetMe.jpg";
-import ugUrl from "../../../assets/images/ugelp.jpg";
-import lhUrl from "../../../assets/images/luxHotel.jpg";
+import tlUrl from "../../../../assets/images/taniaLucely.jpg";
+import buUrl from "../../../../assets/images/budgetMe.jpg";
+import ugUrl from "../../../../assets/images/ugelp.jpg";
+import lhUrl from "../../../../assets/images/luxHotel.jpg";
 
 export const projectsData = [
   { siteUrl: "https://www.tania-lucely.com/", imgUrl: tlUrl },

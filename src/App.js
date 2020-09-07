@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import About from "./components/withProps/About";
-import Contact from "./components/Contact";
-import Projects from "./components/withProps/Projects/Projects";
+import About from "./components/desktop/withProps/About";
+import Contact from "./components/desktop/Contact";
+import Projects from "./components/desktop/withProps/Projects/Projects";
 const Grid = styled.div`
   min-height: 100vh;
   min-width: 100vw;
