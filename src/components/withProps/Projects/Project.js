@@ -5,11 +5,22 @@ const Card = styled.div`
   background-image: url(${({ url }) => url});
   background-position: center;
   background-size: cover;
-  flex: 0 1 250px;
-  height: 200px;
-  border: 2px solid #dbc48e;
+  flex: 0 1 400px;
+  height: 300px;
+  border: 4px solid #dbc48e;
+  border-radius: 3px;
   margin: 15px;
-  @media (max-width: 919px) {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 17, 18, 30%);
+  }
+  @media (max-width: 1178px) {
     &:first-child {
       margin-top: 30px;
     }

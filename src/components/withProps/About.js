@@ -49,6 +49,7 @@ const Closed = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 4;
   background-color: hsl(217, 38%, 19%);
   animation: ${closeAbout} 0.9s cubic-bezier(0.07, 0.58, 0.67, 1.07) forwards;
 `;
