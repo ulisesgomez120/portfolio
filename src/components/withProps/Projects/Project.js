@@ -32,7 +32,7 @@ const Project = (props) => {
       href={props.url}
       style={{ flex: "0 1 400px", margin: "15px", height: "300px" }}
     >
-      <Card img={props.imgUrl}></Card>
+      <Card tabIndex="1" img={props.imgUrl}></Card>
     </a>
   );
 };

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 import styled from "styled-components";
 import About from "./components/withProps/About";
 import Contact from "./components/Contact";
@@ -22,20 +21,26 @@ function App() {
   return (
     <Grid>
       <Projects
-        toggleOpen={() => {
-          if (aboutOpen) setAboutOpen(false);
-          setProjectsOpen(!projectsOpen);
+        toggleOpen={(event) => {
+          if (event.key === "Enter" || event.type === "click") {
+            if (aboutOpen) setAboutOpen(false);
+            setProjectsOpen(!projectsOpen);
+          }
         }}
         open={projectsOpen}
       />
-      <Contact />
+
       <About
-        toggleOpen={() => {
-          if (projectsOpen) setProjectsOpen(false);
-          setAboutOpen(!aboutOpen);
+        toggleOpen={(event) => {
+          if (event.key === "Enter" || event.type === "click") {
+            console.log(event.type);
+            if (projectsOpen) setProjectsOpen(false);
+            setAboutOpen(!aboutOpen);
+          }
         }}
         open={aboutOpen}
       />
+      <Contact />
     </Grid>
   );
 }

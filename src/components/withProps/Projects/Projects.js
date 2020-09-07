@@ -65,7 +65,7 @@ const arrowContainerShrink = keyframes`
   }
 `;
 
-const ProjectsContainer = styled.div`
+const ProjectsContainer = styled.main`
   grid-column: 1 / 11;
   grid-row: 1/11;
   background-color: #292a2c;
@@ -121,13 +121,18 @@ const projectJsx = projectsData.map(({ imgUrl, siteUrl }, i) => (
 const Projects = ({ open, toggleOpen }) => {
   const openProjectStructured = (
     <React.Fragment>
+      <ProjectsContainer>{projectJsx}</ProjectsContainer>
       <Slide className="openSlide">
         <ArrowContainer className="shrinkContainer">
-          <Arrow src={arrowSVG} onClick={toggleOpen} />
+          <Arrow
+            tabIndex="0"
+            src={arrowSVG}
+            onKeyPress={toggleOpen}
+            onClick={toggleOpen}
+            alt="arrow close projects"
+          />
         </ArrowContainer>
       </Slide>
-
-      <ProjectsContainer>{projectJsx}</ProjectsContainer>
     </React.Fragment>
   );
   return open ? (
@@ -136,7 +141,14 @@ const Projects = ({ open, toggleOpen }) => {
     <Slide>
       <Heading>Projects</Heading>
       <ArrowContainer>
-        <Arrow src={arrowSVG} className="openArrow" onClick={toggleOpen} />
+        <Arrow
+          tabIndex="0"
+          src={arrowSVG}
+          className="openArrow"
+          onKeyPress={toggleOpen}
+          onClick={toggleOpen}
+          alt="arrow open projects"
+        />
       </ArrowContainer>
     </Slide>
   );

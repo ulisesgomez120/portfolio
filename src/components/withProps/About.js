@@ -40,7 +40,7 @@ const rotateOpen = keyframes`
       transform: rotate(0deg);
   }
 `;
-const Closed = styled.div`
+const Closed = styled.aside`
   grid-column: 11 / -1;
   grid-row: 1/-1;
   position: absolute;
@@ -90,7 +90,14 @@ const About = ({ open, toggleOpen }) => {
       <Heading className="dark">About</Heading>
       <div style={{ display: "flex", height: "100%" }}>
         <ArrowContainer>
-          <Arrow src={arrowSVG} onClick={toggleOpen} className="open" />
+          <Arrow
+            tabIndex="0"
+            src={arrowSVG}
+            onKeyPress={toggleOpen}
+            onClick={toggleOpen}
+            className="open"
+            alt="arrow close about"
+          />
         </ArrowContainer>
         <div>
           <P>A firm believer in</P>
@@ -132,7 +139,14 @@ const About = ({ open, toggleOpen }) => {
     <Closed>
       <Heading>About</Heading>
       <ArrowContainer>
-        <Arrow src={arrowSVG} onClick={toggleOpen} className="closed" />
+        <Arrow
+          tabIndex="0"
+          src={arrowSVG}
+          onKeyPress={toggleOpen}
+          onClick={toggleOpen}
+          className="closed"
+          alt="arrow open about"
+        />
       </ArrowContainer>
     </Closed>
   );

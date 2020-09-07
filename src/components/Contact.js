@@ -3,7 +3,7 @@ import styled from "styled-components";
 import githubIcon from "../assets/icons/github.svg";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 
-const StyledContact = styled.div`
+const StyledContact = styled.footer`
   grid-column: 1 / 11;
   grid-row: 11/-1;
   background-color: #1e2c42;
@@ -11,7 +11,7 @@ const StyledContact = styled.div`
   display: flex;
   box-shadow: inset -1px -1px 9px 3px rgba(33, 33, 33, 0.6);
 `;
-const H3 = styled.h3`
+const H2 = styled.h2`
   font-size: 27px;
   flex: 0 0 20%;
 `;
@@ -42,7 +42,7 @@ const Link = styled.a`
 const Contact = () => {
   return (
     <StyledContact>
-      <H3>Contact</H3>
+      <H2>Contact</H2>
       <FlexChild>
         <Link href="mailto:ulisesgomez120@gmail.com">
           ulisesgomez120@gmail.com
