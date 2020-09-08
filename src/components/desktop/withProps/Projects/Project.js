@@ -9,7 +9,6 @@ const Card = styled.div`
   width: 100%;
   border: 4px solid #dbc48e;
   border-radius: 3px;
-
   position: relative;
   &::after {
     content: "";
@@ -20,7 +19,7 @@ const Card = styled.div`
     height: 100%;
     background-color: rgba(16, 17, 18, 30%);
   }
-  @media (max-width: 1178px) {
+  @media (max-width: 1178px) and (min-width: 761px) {
     &:first-child {
       margin-top: 30px;
     }

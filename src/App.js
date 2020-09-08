@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import About from "./components/desktop/withProps/About";
 import Contact from "./components/desktop/Contact";
-import Projects from "./components/desktop/withProps/Projects/Projects";
+import Projects from "./components/desktop/withProps/projects/Projects";
+import MobileContainer from "./components/mobile/MobileContainer";
+
 const Grid = styled.div`
   min-height: 100vh;
   min-width: 100vw;
@@ -18,7 +20,9 @@ function App() {
   let [aboutOpen, setAboutOpen] = useState(false);
   let [projectsOpen, setProjectsOpen] = useState(false);
   console.log(window.innerWidth);
-  return (
+  let display;
+  let mobileJsx;
+  let desktopJsx = (
     <Grid>
       <Projects
         toggleOpen={(event) => {
@@ -40,9 +44,16 @@ function App() {
         }}
         open={aboutOpen}
       />
+
       <Contact />
     </Grid>
   );
+  if (window.innerWidth < 760) {
+    display = <MobileContainer />;
+  } else {
+    display = desktopJsx;
+  }
+  return display;
 }
 
 export default App;

@@ -14,6 +14,7 @@ const StyledContact = styled.footer`
 const H2 = styled.h2`
   font-size: 27px;
   flex: 0 0 20%;
+  margin-right: 20px;
 `;
 const FlexChild = styled.div`
   flex: 0 0 15%;
