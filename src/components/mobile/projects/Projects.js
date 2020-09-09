@@ -18,6 +18,7 @@ const ProjectsContainer = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: hsl(220, 4%, 17%);
 `;
 
 const projectJsx = projectsData.map(({ imgUrl, siteUrl }, i) => (
