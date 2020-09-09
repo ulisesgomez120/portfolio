@@ -9,7 +9,11 @@ const NavContainer = styled.nav`
   background-color: pink;
 `;
 const Nav = () => {
-  return <NavContainer></NavContainer>;
+  return (
+    <NavContainer>
+      <a href="#projects">Projects</a>
+    </NavContainer>
+  );
 };
 
 export default Nav;

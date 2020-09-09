@@ -21,7 +21,6 @@ function App() {
   let [projectsOpen, setProjectsOpen] = useState(false);
   console.log(window.innerWidth);
   let display;
-  let mobileJsx;
   let desktopJsx = (
     <Grid>
       <Projects

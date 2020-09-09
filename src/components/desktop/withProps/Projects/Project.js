@@ -19,20 +19,33 @@ const Card = styled.div`
     height: 100%;
     background-color: rgba(16, 17, 18, 30%);
   }
+  &.mobile {
+    border-left: none;
+    border-right: none;
+  }
   @media (max-width: 1178px) and (min-width: 761px) {
     &:first-child {
       margin-top: 30px;
     }
   }
 `;
+const Link = styled.a`
+  flex: 0 1 400px;
+  margin: 15px;
+  height: 300px;
+  &.mobile {
+    margin: 15px 0;
+  }
+`;
 const Project = (props) => {
   return (
-    <a
-      href={props.url}
-      style={{ flex: "0 1 400px", margin: "15px", height: "300px" }}
-    >
-      <Card tabIndex="1" img={props.imgUrl}></Card>
-    </a>
+    <Link className={props.mobile || null} href={props.url}>
+      <Card
+        className={props.mobile || null}
+        tabIndex="1"
+        img={props.imgUrl}
+      ></Card>
+    </Link>
   );
 };
 
