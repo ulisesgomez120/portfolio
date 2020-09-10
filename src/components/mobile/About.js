@@ -12,7 +12,10 @@ const P = styled.p`
 
 const About = () => {
   return (
-    <div style={{ backgroundColor: "#1E2C42", padding: "25px 0 45px" }}>
+    <div
+      id="about"
+      style={{ backgroundColor: "#1E2C42", padding: "25px 0 45px" }}
+    >
       <h2 style={{ textAlign: "center" }}>About</h2>
       <P>A firm believer in</P>
       <P

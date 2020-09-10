@@ -12,6 +12,7 @@ const Nav = () => {
   return (
     <NavContainer>
       <a href="#projects">Projects</a>
+      <a href="#about">About</a>
     </NavContainer>
   );
 };
