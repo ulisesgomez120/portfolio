@@ -44,7 +44,7 @@ function App() {
         open={aboutOpen}
       />
 
-      <Contact />
+      <Contact desktop="desktop" />
     </Grid>
   );
   if (window.innerWidth < 760) {

@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import arrowSVG from "../../../assets/icons/arrow.svg";
+import resume from "../../../assets/pdf/Ulises-Gomez.pdf";
 
 const openAbout = keyframes`
   from {
@@ -125,7 +126,7 @@ const About = ({ open, toggleOpen }) => {
             front-end the most. I especially like{" "}
             <span style={{ color: "#61DBFB" }}>React</span> and have been using
             styled-components lately. A full list of my skills can be found on
-            my resume --{">"} Ulises_Gomez.pdf
+            my resume --{">"} <a href={resume}> Ulises-Gomez.pdf</a>
           </P>
           <P>
             Apart from a programmer, I am also a Husband, a gammer, and, once

@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import arrowSVG from "../../../../assets/icons/arrow.svg";
+import stripesSVG from "../../../../assets/icons/stripes.svg";
 import Project from "./Project";
 import tlUrl from "../../../../assets/images/taniaLucely.jpg";
 import buUrl from "../../../../assets/images/budgetMe.jpg";
@@ -115,6 +116,14 @@ const Arrow = styled.img`
     animation: ${rotateOpen} 0.7s ease forwards;
   }
 `;
+const Stripes = styled.img`
+  position: absolute;
+  bottom: -128px;
+  right: -105px;
+  &.opened {
+    transform: translateY(-6px);
+  }
+`;
 
 const projectJsx = projectsData.map(({ imgUrl, siteUrl }, i) => (
   <Project key={i} imgUrl={imgUrl} url={siteUrl} />
@@ -124,6 +133,11 @@ const Projects = ({ open, toggleOpen }) => {
     <React.Fragment>
       <ProjectsContainer>{projectJsx}</ProjectsContainer>
       <Slide className="openSlide">
+        <Stripes
+          src={stripesSVG}
+          alt="decorational stripes"
+          className="opened"
+        />
         <ArrowContainer className="shrinkContainer">
           <Arrow
             tabIndex="0"
@@ -151,6 +165,7 @@ const Projects = ({ open, toggleOpen }) => {
           alt="arrow open projects"
         />
       </ArrowContainer>
+      <Stripes src={stripesSVG} alt="decorational stripes" />
     </Slide>
   );
 };

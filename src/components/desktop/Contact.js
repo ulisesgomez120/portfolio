@@ -4,17 +4,28 @@ import githubIcon from "../../assets/icons/github.svg";
 import linkedinIcon from "../../assets/icons/linkedin.svg";
 
 const StyledContact = styled.footer`
-  grid-column: 1 / 11;
-  grid-row: 11/-1;
-  background-color: #1e2c42;
-  padding: 23px;
-  display: flex;
-  box-shadow: inset -1px -1px 9px 3px rgba(33, 33, 33, 0.6);
+  padding: 33px 0 220px;
+  text-align: center;
+  background-color: #5d7889;
+  &.desktop {
+    text-align: initial;
+    grid-column: 1 / 11;
+    grid-row: 11/-1;
+    background-color: #1e2c42;
+    padding: 23px;
+    display: flex;
+    box-shadow: inset -1px -1px 9px 3px rgba(33, 33, 33, 0.6);
+    z-index: 1;
+  }
 `;
 const H2 = styled.h2`
   font-size: 27px;
   flex: 0 0 20%;
-  margin-right: 20px;
+  margin-bottom: 16px;
+  &.desktop {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 `;
 const FlexChild = styled.div`
   flex: 0 0 15%;
@@ -26,6 +37,7 @@ const FlexChild = styled.div`
 const IconContainer = styled.div`
   display: flex;
   justify-content: center;
+  padding: 16px;
 `;
 
 const IconLink = styled.a`
@@ -37,17 +49,13 @@ const IconLink = styled.a`
     margin-right: 40px;
   }
 `;
-const Link = styled.a`
-  color: #f7d891;
-`;
-const Contact = () => {
+
+const Contact = ({ desktop }) => {
   return (
-    <StyledContact>
-      <H2>Contact</H2>
+    <StyledContact className={desktop || null}>
+      <H2 className={desktop || null}>Contact</H2>
       <FlexChild>
-        <Link href="mailto:ulisesgomez120@gmail.com">
-          ulisesgomez120@gmail.com
-        </Link>
+        <a href="mailto:ulisesgomez120@gmail.com">ulisesgomez120@gmail.com</a>
         <IconContainer>
           <IconLink href="https://www.linkedin.com/in/ulises-gomez/">
             <img src={linkedinIcon} alt="linkedin" />

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import resume from "../../assets/pdf/Ulises-Gomez.pdf";
 
 const P = styled.p`
   color: ${({ color }) => color || "white"};
@@ -38,7 +39,11 @@ const About = () => {
         the most. I especially like{" "}
         <span style={{ color: "#61DBFB" }}>React</span> and have been using
         styled-components lately. A full list of my skills can be found on my
-        resume --{">"} Ulises_Gomez.pdf
+        resume --{">"}{" "}
+        <a href={resume} download="Ulises-Gomez.pdf">
+          {" "}
+          Ulises-Gomez.pdf
+        </a>
       </P>
       <P>
         Apart from a programmer, I am also a Husband, a gammer, and, once Covid
