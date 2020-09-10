@@ -1,5 +1,5 @@
-import React from "./node_modules/react";
-import styled from "./node_modules/styled-components";
+import React from "react";
+import styled from "styled-components";
 import Project from "../../desktop/withProps/Projects/Project";
 import tlUrl from "../../../assets/images/taniaLucely.jpg";
 import buUrl from "../../../assets/images/budgetMe.jpg";
