@@ -6,7 +6,7 @@ import linkedinIcon from "../../assets/icons/linkedin.svg";
 const StyledContact = styled.footer`
   padding: 33px 0 220px;
   text-align: center;
-  background-color: #5d7889;
+  background-color: hsl(220, 4%, 17%);
   &.desktop {
     text-align: initial;
     grid-column: 1 / 11;
