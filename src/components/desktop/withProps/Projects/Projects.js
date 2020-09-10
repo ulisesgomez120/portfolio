@@ -7,7 +7,7 @@ import buUrl from "../../../../assets/images/budgetMe.jpg";
 import ugUrl from "../../../../assets/images/ugelp.jpg";
 import lhUrl from "../../../../assets/images/luxHotel.jpg";
 
-export const projectsData = [
+const projectsData = [
   { siteUrl: "https://www.tania-lucely.com/", imgUrl: tlUrl },
   { siteUrl: "https://budgetplan.netlify.app/", imgUrl: buUrl },
   { siteUrl: "https://ugelp.netlify.app/", imgUrl: ugUrl },

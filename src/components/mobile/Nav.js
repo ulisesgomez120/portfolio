@@ -6,7 +6,7 @@ const NavContainer = styled.nav`
   bottom: 0;
   width: 100%;
   height: 10%;
-  background-color: pink;
+  background-color: #637e8e;
 `;
 const Nav = () => {
   return (
