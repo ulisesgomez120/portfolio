@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import About from "./components/desktop/withProps/About";
 import Contact from "./components/desktop/Contact";
-import Projects from "./components/desktop/withProps/projects/Projects";
+import Projects from "./components/desktop/withProps/Projects/Projects";
 import MobileContainer from "./components/mobile/MobileContainer";
 
-const Grid = styled.div`
+const Grid = styled.main`
   min-height: 100vh;
   min-width: 100vw;
   background-color: #292a2c;

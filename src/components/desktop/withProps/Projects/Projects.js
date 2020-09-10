@@ -65,12 +65,13 @@ const arrowContainerShrink = keyframes`
   }
 `;
 
-const ProjectsContainer = styled.main`
+const ProjectsContainer = styled.div`
   grid-column: 1 / 11;
   grid-row: 1/11;
   background-color: #292a2c;
   padding: 23px;
   display: flex;
+  max-height: 100%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;

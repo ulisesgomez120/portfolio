@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
-import Projects from "./projects/Projects";
+import Projects from "./Projects/Projects";
 const MobileContainer = () => {
   return (
     <main>

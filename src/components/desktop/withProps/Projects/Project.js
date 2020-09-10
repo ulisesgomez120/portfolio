@@ -23,11 +23,6 @@ const Card = styled.div`
     border-left: none;
     border-right: none;
   }
-  @media (max-width: 1178px) and (min-width: 761px) {
-    &:first-child {
-      margin-top: 30px;
-    }
-  }
 `;
 const Link = styled.a`
   flex: 0 1 400px;
@@ -35,6 +30,11 @@ const Link = styled.a`
   height: 300px;
   &.mobile {
     margin: 15px 0;
+  }
+  @media (max-width: 1178px) and (min-width: 761px) {
+    &:first-child {
+      margin-top: 30px;
+    }
   }
 `;
 const Project = (props) => {
