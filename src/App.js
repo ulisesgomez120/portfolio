@@ -20,29 +20,24 @@ function App() {
   let [aboutOpen, setAboutOpen] = useState(false);
   let [projectsOpen, setProjectsOpen] = useState(false);
   console.log(window.innerWidth);
+  const toggleProjectsOpen = (event) => {
+    if (event.key === "Enter" || event.type === "click") {
+      if (aboutOpen) setAboutOpen(false);
+      setProjectsOpen(!projectsOpen);
+    }
+  };
+  const toggleAboutOpen = (event) => {
+    if (event.key === "Enter" || event.type === "click") {
+      if (projectsOpen) setProjectsOpen(false);
+      setAboutOpen(!aboutOpen);
+    }
+  };
   let display;
   let desktopJsx = (
     <Grid>
-      <Projects
-        toggleOpen={(event) => {
-          if (event.key === "Enter" || event.type === "click") {
-            if (aboutOpen) setAboutOpen(false);
-            setProjectsOpen(!projectsOpen);
-          }
-        }}
-        open={projectsOpen}
-      />
+      <Projects toggleOpen={toggleProjectsOpen} open={projectsOpen} />
 
-      <About
-        toggleOpen={(event) => {
-          if (event.key === "Enter" || event.type === "click") {
-            console.log(event.type);
-            if (projectsOpen) setProjectsOpen(false);
-            setAboutOpen(!aboutOpen);
-          }
-        }}
-        open={aboutOpen}
-      />
+      <About toggleOpen={toggleAboutOpen} open={aboutOpen} />
 
       <Contact desktop="desktop" />
     </Grid>
