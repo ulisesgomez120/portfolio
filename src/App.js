@@ -16,7 +16,21 @@ function App() {
 
     display = <DesktopContainer />;
   }
-  return <Suspense fallback={<span></span>}>{display}</Suspense>;
+  return (
+    <Suspense
+      fallback={
+        <span
+          style={{
+            width: "100%",
+            height: "100%",
+            backgroundColor: "hsl(220, 4%, 17%)",
+          }}
+        ></span>
+      }
+    >
+      {display}
+    </Suspense>
+  );
 }
 
 export default App;
