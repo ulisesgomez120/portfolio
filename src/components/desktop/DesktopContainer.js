@@ -17,7 +17,7 @@ const Grid = styled.main`
 
 const DesktopContainer = () => {
   let [aboutOpen, setAboutOpen] = useState(false);
-  let [projectsOpen, setProjectsOpen] = useState(false);
+  let [projectsOpen, setProjectsOpen] = useState(true);
   const toggleProjectsOpen = (event) => {
     if (event.key === "Enter" || event.type === "click") {
       if (aboutOpen) setAboutOpen(false);
@@ -36,7 +36,7 @@ const DesktopContainer = () => {
 
       <About toggleOpen={toggleAboutOpen} open={aboutOpen} />
 
-      <Contact desktop="desktop" />
+      <Contact desktop='desktop' />
     </Grid>
   );
 };

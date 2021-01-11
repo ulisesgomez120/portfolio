@@ -22,12 +22,12 @@ const ProjectsContainer = styled.section`
 `;
 
 const projectJsx = projectsData.map(({ imgUrl, siteUrl }, i) => (
-  <Project key={i} imgUrl={imgUrl} url={siteUrl} mobile="mobile" />
+  <Project key={i} imgUrl={imgUrl} url={siteUrl} mobile='mobile' />
 ));
 
 const Projects = () => {
   return (
-    <ProjectsContainer id="projects">
+    <ProjectsContainer id='projects'>
       <h1 style={{ flex: "1 0 100%", textAlign: "center" }}>Projects</h1>
       {projectJsx}
     </ProjectsContainer>
