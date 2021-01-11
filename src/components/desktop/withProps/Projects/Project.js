@@ -39,12 +39,8 @@ const Link = styled.a`
 `;
 const Project = (props) => {
   return (
-    <Link className={props.mobile || null} href={props.url}>
-      <Card
-        className={props.mobile || null}
-        tabIndex="1"
-        img={props.imgUrl}
-      ></Card>
+    <Link tabIndex="0" className={props.mobile || null} href={props.url}>
+      <Card className={props.mobile || null} img={props.imgUrl}></Card>
     </Link>
   );
 };
