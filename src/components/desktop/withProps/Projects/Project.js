@@ -7,27 +7,24 @@ const Card = styled.div`
   background-size: cover;
   height: 100%;
   width: 100%;
-  border: 4px solid #dbc48e;
+  border: 3px solid #dbc48e;
   border-radius: 3px;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(16, 17, 18, 30%);
+  ${
+    "" /* &:hover {
+    background-image: url(${({ mobileImg, img }) =>
+      mobileImg ? mobileImg : img});
+  } */
   }
+  ${"" /* change mobile css */}
   &.mobile {
     border-left: none;
     border-right: none;
   }
 `;
 const Link = styled.a`
-  flex: 0 1 400px;
+  flex: 0 1 650px;
   margin: 15px;
-  height: 300px;
+  height: 328px;
   &.mobile {
     margin: 15px 0;
   }
@@ -37,10 +34,17 @@ const Link = styled.a`
     }
   }
 `;
+
+// fix images of projects
 const Project = (props) => {
   return (
-    <Link tabIndex="0" className={props.mobile || null} href={props.url}>
-      <Card className={props.mobile || null} img={props.imgUrl}></Card>
+    <Link tabIndex='0' className={props.mobile || null} href={props.url}>
+      <Card
+        className={props.mobile || null}
+        img={props.imgUrl}
+        mobileImg={props.mobileImg}>
+        {/* <img src={props.imgUrl} /> */}
+      </Card>
     </Link>
   );
 };

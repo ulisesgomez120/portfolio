@@ -10,11 +10,11 @@ const StyledContact = styled.footer`
   &.desktop {
     text-align: initial;
     grid-column: 1 / 11;
-    grid-row: 11/-1;
+    grid-row: 12/-1;
     background-color: #1e2c42;
     padding: 23px;
     display: flex;
-    box-shadow: inset -1px -1px 9px 3px rgba(33, 33, 33, 0.6);
+    box-shadow: inset -1px -1px 5px 0px rgba(33, 33, 33, 0.6);
     z-index: 1;
   }
 `;
@@ -23,7 +23,6 @@ const H2 = styled.h2`
   flex: 0 0 20%;
   margin-bottom: 16px;
   &.desktop {
-    margin-right: 20px;
     margin-bottom: 0;
   }
 `;
@@ -55,13 +54,13 @@ const Contact = ({ desktop }) => {
     <StyledContact className={desktop || null}>
       <H2 className={desktop || null}>Contact</H2>
       <FlexChild>
-        <a href="mailto:ulisesgomez120@gmail.com">ulisesgomez120@gmail.com</a>
+        <a href='mailto:ulisesgomez120@gmail.com'>ulisesgomez120@gmail.com</a>
         <IconContainer>
-          <IconLink href="https://www.linkedin.com/in/ulises-gomez/">
-            <img src={linkedinIcon} alt="linkedin" />
+          <IconLink href='https://www.linkedin.com/in/ulises-gomez/'>
+            <img src={linkedinIcon} alt='linkedin' />
           </IconLink>
-          <IconLink href="https://github.com/ulisesgomez120">
-            <img src={githubIcon} alt="github" />
+          <IconLink href='https://github.com/ulisesgomez120'>
+            <img src={githubIcon} alt='github' />
           </IconLink>
         </IconContainer>
       </FlexChild>

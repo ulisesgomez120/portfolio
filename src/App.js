@@ -13,21 +13,18 @@ function App() {
     const DesktopContainer = lazy(() =>
       import("./components/desktop/DesktopContainer")
     );
-
     display = <DesktopContainer />;
   }
   return (
     <Suspense
       fallback={
-        <span
+        <div
           style={{
             width: "100%",
             height: "100%",
             backgroundColor: "hsl(220, 4%, 17%)",
-          }}
-        ></span>
-      }
-    >
+          }}></div>
+      }>
       {display}
     </Suspense>
   );

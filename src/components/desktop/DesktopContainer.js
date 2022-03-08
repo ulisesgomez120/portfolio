@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import About from "./withProps/About";
+// raise contact component up one level so that it's accessable to mobile files
 import Contact from "./Contact";
 import Projects from "./withProps/Projects/Projects";
 
@@ -18,12 +19,16 @@ const Grid = styled.main`
 const DesktopContainer = () => {
   let [aboutOpen, setAboutOpen] = useState(false);
   let [projectsOpen, setProjectsOpen] = useState(true);
+
+  // Refactor both toggle functions to one function that reads target event id or some identifier.
+  // then toggle section open closed based on selection
   const toggleProjectsOpen = (event) => {
     if (event.key === "Enter" || event.type === "click") {
       if (aboutOpen) setAboutOpen(false);
       setProjectsOpen(!projectsOpen);
     }
   };
+
   const toggleAboutOpen = (event) => {
     if (event.key === "Enter" || event.type === "click") {
       if (projectsOpen) setProjectsOpen(false);
@@ -35,6 +40,7 @@ const DesktopContainer = () => {
       <Projects toggleOpen={toggleProjectsOpen} open={projectsOpen} />
 
       <About toggleOpen={toggleAboutOpen} open={aboutOpen} />
+      {/* Contact prop desktop should be boolean */}
 
       <Contact desktop='desktop' />
     </Grid>

@@ -3,16 +3,26 @@ import styled, { keyframes } from "styled-components";
 import arrowSVG from "../../../../assets/icons/arrow.svg";
 import stripesSVG from "../../../../assets/icons/stripes.svg";
 import Project from "./Project";
-import tlUrl from "../../../../assets/images/taniaLucely.jpg";
-import buUrl from "../../../../assets/images/budgetMe.jpg";
-import ugUrl from "../../../../assets/images/ugelp.jpg";
-import lhUrl from "../../../../assets/images/luxHotel.jpg";
+import tlUrl from "../../../../assets/images/taniaLucely.png";
+import buUrl from "../../../../assets/images/stockTargets.png";
+import ugUrl from "../../../../assets/images/ugelp.png";
+import ttUrl from "../../../../assets/images/tradeTracker.png";
 
 const projectsData = [
-  { siteUrl: "https://www.tania-lucely.com/", imgUrl: tlUrl },
-  { siteUrl: "https://budgetplan.netlify.app/", imgUrl: buUrl },
+  {
+    siteUrl: "https://www.tania-lucely.com/",
+    imgUrl: tlUrl,
+  },
+  {
+    siteUrl:
+      "https://chrome.google.com/webstore/detail/stock-price-targets/pmiooplogkhdohpabeokdhinbailcoif",
+    imgUrl: buUrl,
+  },
   { siteUrl: "https://ugelp.netlify.app/", imgUrl: ugUrl },
-  { siteUrl: "https://luxhotel.netlify.app/", imgUrl: lhUrl },
+  {
+    siteUrl: "https://tradetracker.netlify.app/",
+    imgUrl: ttUrl,
+  },
 ];
 
 const closeProjects = keyframes`
@@ -68,7 +78,7 @@ const arrowContainerShrink = keyframes`
 
 const ProjectsContainer = styled.div`
   grid-column: 1 / 11;
-  grid-row: 1/11;
+  grid-row: 1/12;
   background-color: #292a2c;
   padding: 23px;
   display: flex;
@@ -125,30 +135,30 @@ const Stripes = styled.img`
   }
 `;
 
-const projectJsx = projectsData.map(({ imgUrl, siteUrl }, i) => (
-  <Project key={i} imgUrl={imgUrl} url={siteUrl} />
+const projectJsx = projectsData.map(({ imgUrl, siteUrl, mobileImg }, i) => (
+  <Project key={i} imgUrl={imgUrl} url={siteUrl} mobileImg={mobileImg} />
 ));
 const Projects = ({ open, toggleOpen }) => {
   const openProjectStructured = (
-    <React.Fragment>
+    <>
       <ProjectsContainer>{projectJsx}</ProjectsContainer>
-      <Slide className="openSlide">
+      <Slide className='openSlide'>
         <Stripes
           src={stripesSVG}
-          alt="decorational stripes"
-          className="opened"
+          alt='decorational stripes'
+          className='opened'
         />
-        <ArrowContainer className="shrinkContainer">
+        <ArrowContainer className='shrinkContainer'>
           <Arrow
-            tabIndex="0"
+            tabIndex='0'
             src={arrowSVG}
             onKeyPress={toggleOpen}
             onClick={toggleOpen}
-            alt="arrow close projects"
+            alt='arrow close projects'
           />
         </ArrowContainer>
       </Slide>
-    </React.Fragment>
+    </>
   );
   return open ? (
     openProjectStructured
@@ -157,15 +167,15 @@ const Projects = ({ open, toggleOpen }) => {
       <Heading>Projects</Heading>
       <ArrowContainer>
         <Arrow
-          tabIndex="0"
+          tabIndex='0'
           src={arrowSVG}
-          className="openArrow"
+          className='openArrow'
           onKeyPress={toggleOpen}
           onClick={toggleOpen}
-          alt="arrow open projects"
+          alt='arrow open projects'
         />
       </ArrowContainer>
-      <Stripes src={stripesSVG} alt="decorational stripes" />
+      <Stripes src={stripesSVG} alt='decorational stripes' />
     </Slide>
   );
 };

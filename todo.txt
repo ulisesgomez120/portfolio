@@ -1,0 +1,24 @@
+Go through app and get an understanding of what you were doing.
+
+Objectives:
+-Update Project Screen shots
+  -add Chrome Extension/ with screen shots *$
+  -Remove BudgetMe app. *$
+  -Remove default gray overlay *$
+  -Add an onHover overlay with tools used e.g React, styled-components...
+  -edit screenshots in Figma to get correct img sizes and demensions/ mobile view as well *$ need ugelp screen shot
+
+-Ugelp Does not work. Fix it. 
+  -Yelp api is not working. Due to cors I had to pipe the request through another url which is no longer up.
+
+
+Update About section
+  -Maybe have that open first?
+  -Add a profile Picture.
+  -Add Design Inspirations
+    -dad's favorite bottle Blue Label
+
+Update Mobile version.
+  - Projects are over the edges 
+  - Doesn't show 4th project. 
+  -Maybe change Nav? delete possibly

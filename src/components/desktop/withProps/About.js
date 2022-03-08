@@ -81,6 +81,7 @@ const Arrow = styled.img`
 `;
 const Heading = styled.h2`
   font-size: 28px;
+  text-shadow: 0px -3px 1px #333;
   &.dark {
     color: #14171c;
   }
@@ -88,37 +89,35 @@ const Heading = styled.h2`
 const About = ({ open, toggleOpen }) => {
   return open ? (
     <Open>
-      <Heading className="dark">About</Heading>
+      <Heading className='dark'>About</Heading>
       <div style={{ display: "flex", height: "100%" }}>
         <ArrowContainer>
           <Arrow
-            tabIndex="0"
+            tabIndex='0'
             src={arrowSVG}
             onKeyPress={toggleOpen}
             onClick={toggleOpen}
-            className="open"
-            alt="arrow close about"
+            className='open'
+            alt='arrow close about'
           />
         </ArrowContainer>
         <div>
           <P>A firm believer in</P>
           <P
-            fontSize="1.4em"
-            color="#f7d891"
-            align="right"
-            margin="30px 45px"
-            opacity="100%"
-          >
+            fontSize='1.4em'
+            color='#f7d891'
+            align='right'
+            margin='30px 45px'
+            opacity='100%'>
             Getting After It!
           </P>
           <P>and answering most problems with one word</P>
           <P
-            fontSize="1.6em"
-            color="#f7d891"
-            align="right"
-            margin="30px 55px"
-            opacity="100%"
-          >
+            fontSize='1.6em'
+            color='#f7d891'
+            align='right'
+            margin='30px 55px'
+            opacity='100%'>
             GOOD.
           </P>
           <P>
@@ -141,12 +140,12 @@ const About = ({ open, toggleOpen }) => {
       <Heading>About</Heading>
       <ArrowContainer>
         <Arrow
-          tabIndex="0"
+          tabIndex='0'
           src={arrowSVG}
           onKeyPress={toggleOpen}
           onClick={toggleOpen}
-          className="closed"
-          alt="arrow open about"
+          className='closed'
+          alt='arrow open about'
         />
       </ArrowContainer>
     </Closed>
