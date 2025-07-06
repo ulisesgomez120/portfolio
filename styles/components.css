@@ -1,0 +1,273 @@
+/* Button Components */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--cleanSansSerif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transitionSmooth), transform var(--transitionSmooth),
+    filter var(--transitionSmooth);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: scale(1.03);
+}
+
+.btn:focus {
+  outline: 2px solid var(--ctaPrimary);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--ctaPrimary);
+  color: var(--ctaText);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primaryText);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Accordion Components */
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 1rem;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--elegantSerif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--primaryText);
+  transition: opacity var(--transitionSmooth);
+  user-select: none;
+}
+
+.accordion-header:hover {
+  opacity: 0.8;
+}
+
+.accordion-header:focus {
+  outline: 2px solid var(--ctaPrimary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.accordion-title-text {
+  flex: 1;
+  text-align: left;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform var(--transitionSlow);
+  color: var(--ctaPrimary);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transitionSlow), padding var(--transitionSlow);
+  padding-top: 0;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding-top: 1rem;
+}
+
+.project-description {
+  font-family: var(--cleanSansSerif);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--primaryText);
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primaryText);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-family: var(--cleanSansSerif);
+  font-size: 0.75rem;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color var(--transitionSmooth);
+}
+
+.tech-tag:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Loading States */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn:disabled:hover {
+  filter: none;
+  transform: none;
+}
+
+/* Button Groups */
+.hero-actions .btn + .btn {
+  margin-left: 0;
+}
+
+/* Responsive Button Adjustments */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .accordion-header {
+    font-size: 1.1rem;
+  }
+
+  .accordion-item {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .project-tech {
+    gap: 0.375rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .btn-secondary {
+    border-width: 2px;
+  }
+
+  .tech-tag {
+    border-width: 2px;
+  }
+
+  .accordion-item {
+    border-bottom-width: 2px;
+  }
+}
+
+/* Dark Mode Adjustments (if system preference changes) */
+@media (prefers-color-scheme: light) {
+  /* Portfolio is designed for dark theme, but we can add subtle adjustments if needed */
+  .btn-secondary {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Animation Performance Optimization */
+.accordion-content {
+  will-change: max-height;
+}
+
+.accordion-icon {
+  will-change: transform;
+}
+
+.btn {
+  will-change: transform, filter;
+}
+
+/* Focus Management for Accessibility */
+.accordion-header[tabindex="0"]:focus {
+  outline: 2px solid var(--ctaPrimary);
+  outline-offset: 2px;
+}
+
+/* Keyboard Navigation Styles */
+.accordion-item:focus-within {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Print Styles */
+@media print {
+  .btn {
+    background: none !important;
+    color: black !important;
+    border: 1px solid black !important;
+  }
+
+  .accordion-content {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .accordion-icon {
+    display: none;
+  }
+}
